@@ -8,3 +8,14 @@ function sendEmail() {
 function callUs() {
     window.location.href = "tel:+2349071577490"; 
 }
+
+
+// This function toggles the theme between light and dark mode
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme === "dark") {
+    document.documentElement.removeAttribute("data-theme");
+    } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    }
+}

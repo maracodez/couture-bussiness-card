@@ -4,14 +4,34 @@
     padding: 0;
 }
 
+:root {
+    --bg: #f8f4f1;
+    --text: #130f0f;
+    --card-bg: #ffffff;
+    --button-bg: #686a6c;
+    --button-hover: #39586f;
+    --desc-color: #555;
+}
+
+[data-theme="dark"] {
+    --bg: #1a1b21;
+    --text: #f5f5f5;
+    --card-bg: #2c2c2c;
+    --button-bg: #bbbec4;
+    --button-hover1: #848181;
+    --button-hover: #245bb9;
+    --desc-color: #ccc;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #161619;
+    background-color: black;
+    color: var(--text);
 }
 
 .container {
-    background-color: #1a1b21;
-    color: white;
+    background-color: var(--card-bg);
+    color: var(--text);
     margin: 0 auto;
     text-align: center;
     width: 321px;
@@ -44,10 +64,10 @@ h1 {
 
 .btn,
 .btn2 {
-    background-color: #c7c4c2;
+   background-color: var(--button-bg);
     border: none;
     border-radius: 5px;
-    color: black;
+    color: var(--card-bg);
     cursor: pointer;
     font-size: 15px;
     margin: 5px 13px;
@@ -70,12 +90,12 @@ h1 {
 }
 
 .btn2:hover {
-    background-color: #3a76e6;
+    background-color: var(--button-hover);
     font-size: 16px;
 }
 
 .btn:hover {
-    background-color: #b9b6b4;
+    background-color: var(--button-hover1);
     font-size: 16px;
 }
 
@@ -91,7 +111,7 @@ h2 {
 }
 
 .about p {
-    color: #e6dbdb;
+    color: var(--desc-color);
     font-size: .85rem;
     line-height: 21px;
 }
@@ -122,6 +142,29 @@ h2 {
     transform: scale(1.5);
 }
 
+/* Floating toggle button */
+.toggle-theme {
+    position: fixed;
+    bottom: 5%;
+    right: 38vw; 
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.toggle-theme:hover {
+    background-color: var(--button-hover);
+}
+  
+
+/* Media Queries */
+
 @media (max-width: 478px) {
     .container {
         width: 100%;
@@ -133,23 +176,31 @@ h2 {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .p {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .btn,
     .btn2 {
-        padding: 6px 20px;
-        font-size: 14px;
+        padding: 15px 25px;
+        font-size: 18px;
     }
 
     .about p {
 
         font-size: .95rem;
         line-height: 23px;      
+    }
+
+    .toggle-theme {
+        right: 5%;
+        bottom: 5%;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
     }
 
 }
