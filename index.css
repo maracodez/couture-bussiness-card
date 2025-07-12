@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #161619;
+}
+
+.container {
+    background-color: #1a1b21;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 321px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.profile-image {
+    width: 318px;
+    height: 318px;
+   border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+h1 {
+    font-size: 27px;
+    margin: 3px 0;
+}
+
+.p {
+    font-size: 15px;
+   color: rgb(243, 191, 153)
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.btn,
+.btn2 {
+    background-color: #c7c4c2;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px 13px;
+    padding: 8px 25px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn2 {
+    background-color: #4083f8;
+    color: white;
+}
+
+.btn img,
+.btn2 img {
+    width: 19px;
+    height: 20px;
+}
+
+.btn2:hover {
+    background-color: #3a76e6;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #b9b6b4;
+    font-size: 16px;
+}
+
+.about {
+    text-align: left;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    padding: 9px 0;
+}
+
+.about p {
+    color: #e6dbdb;
+    font-size: .85rem;
+    line-height: 21px;
+}
+
+.footer {
+    align-items: center;
+    background-color: #4d4d4e;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: .75rem;
+}
+
+.socials-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.socials-footer img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+} 
+
+.socials-footer img:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 478px) {
+    .container {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: auto;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .p {
+        font-size: 16px;
+    }
+
+    .btn,
+    .btn2 {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    .about p {
+
+        font-size: .95rem;
+        line-height: 23px;      
+    }
+
+}
